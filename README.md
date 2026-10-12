@@ -103,3 +103,7 @@ The left-side **Calls · Session history** appends each clean or flagged decisio
 `src/meeting-mode.js` contains the speed clock and independent decision-history snapshots. Tests cover normal/fast switching, bounded simulation steps, repeated occurrences and evidence independence from the active dataset.
 
 Clean cases can be inspected from the left history using the same stored-evidence panel. Clean entries and verdict badges are green; flagged entries and badges are red.
+
+## Publishing
+
+GitHub Pages serves `main` → `/docs` at `simfarm.devanshu.wiki`. The Namecheap CNAME host `simfarm` must point to `devanshuVT.github.io`. To publish changes, run `npm run build`, replace `docs/` with the contents of `dist/`, retain `docs/.nojekyll`, then commit and push the updated source and docs. `public/CNAME` preserves the custom domain in future builds.
