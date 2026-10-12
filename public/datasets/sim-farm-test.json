@@ -1,0 +1,1938 @@
+[
+  {
+    "kind": "raw",
+    "id": "raw_1",
+    "timestamp": 0,
+    "tower_id": "tower_1",
+    "ue_id": "SIM-1001",
+    "signal_type": "cqi",
+    "value": 10
+  },
+  {
+    "kind": "raw",
+    "id": "raw_2",
+    "timestamp": 180,
+    "tower_id": "tower_1",
+    "ue_id": "SIM-1001",
+    "signal_type": "pusch_sinr",
+    "value": 17.3
+  },
+  {
+    "kind": "raw",
+    "id": "raw_3",
+    "timestamp": 360,
+    "tower_id": "tower_1",
+    "ue_id": "SIM-1001",
+    "signal_type": "call_interval",
+    "value": 117.5
+  },
+  {
+    "kind": "raw",
+    "id": "raw_4",
+    "timestamp": 540,
+    "tower_id": "tower_1",
+    "ue_id": "SIM-1001",
+    "signal_type": "context_score",
+    "value": 0.28
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_1",
+    "timestamp": 2100,
+    "agent_id": "cqi",
+    "ue_id": "SIM-1001",
+    "feature": "quality_deficit",
+    "value": 0.333,
+    "derived_from": [
+      "raw_1"
+    ],
+    "why": "Mock radio-quality context"
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_2",
+    "timestamp": 2280,
+    "agent_id": "mobility",
+    "ue_id": "SIM-1001",
+    "feature": "uplink_impairment",
+    "value": 0.308,
+    "derived_from": [
+      "raw_2"
+    ],
+    "why": "Mock uplink context; mobility not inferred"
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_3",
+    "timestamp": 2460,
+    "agent_id": "timing",
+    "ue_id": "SIM-1001",
+    "feature": "short_interval_score",
+    "value": 0.021,
+    "derived_from": [
+      "raw_3"
+    ],
+    "why": "Mock call-spacing context"
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_4",
+    "timestamp": 2640,
+    "agent_id": "context",
+    "ue_id": "SIM-1001",
+    "feature": "context_proxy",
+    "value": 0.28,
+    "derived_from": [
+      "raw_4"
+    ],
+    "why": "Placeholder synthetic context"
+  },
+  {
+    "kind": "raw",
+    "id": "raw_5",
+    "timestamp": 4000,
+    "tower_id": "tower_2",
+    "ue_id": "SIM-1002",
+    "signal_type": "cqi",
+    "value": 14
+  },
+  {
+    "kind": "raw",
+    "id": "raw_6",
+    "timestamp": 4180,
+    "tower_id": "tower_2",
+    "ue_id": "SIM-1002",
+    "signal_type": "pusch_sinr",
+    "value": 21
+  },
+  {
+    "kind": "core_decision",
+    "id": "decision_1",
+    "timestamp": 4340,
+    "ue_id": "SIM-1001",
+    "agent_inputs": [
+      "input_raw_1",
+      "input_raw_2",
+      "input_raw_3",
+      "input_raw_4"
+    ],
+    "verdict": "clean",
+    "confidence": 0.954,
+    "contributions": [
+      {
+        "agent_id": "cqi",
+        "weight": 0.15
+      },
+      {
+        "agent_id": "mobility",
+        "weight": 0.2
+      },
+      {
+        "agent_id": "timing",
+        "weight": 0.5
+      },
+      {
+        "agent_id": "context",
+        "weight": 0.15
+      }
+    ],
+    "reasoning_trace": "The synthetic call-spacing, radio and context proxies are within the demo baseline. The mock fusion result marks this call clean."
+  },
+  {
+    "kind": "raw",
+    "id": "raw_7",
+    "timestamp": 4360,
+    "tower_id": "tower_2",
+    "ue_id": "SIM-1002",
+    "signal_type": "call_interval",
+    "value": 79
+  },
+  {
+    "kind": "raw",
+    "id": "raw_8",
+    "timestamp": 4540,
+    "tower_id": "tower_2",
+    "ue_id": "SIM-1002",
+    "signal_type": "context_score",
+    "value": 0.17
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_5",
+    "timestamp": 6100,
+    "agent_id": "cqi",
+    "ue_id": "SIM-1002",
+    "feature": "quality_deficit",
+    "value": 0.067,
+    "derived_from": [
+      "raw_5"
+    ],
+    "why": "Mock radio-quality context"
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_6",
+    "timestamp": 6280,
+    "agent_id": "mobility",
+    "ue_id": "SIM-1002",
+    "feature": "uplink_impairment",
+    "value": 0.16,
+    "derived_from": [
+      "raw_6"
+    ],
+    "why": "Mock uplink context; mobility not inferred"
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_7",
+    "timestamp": 6460,
+    "agent_id": "timing",
+    "ue_id": "SIM-1002",
+    "feature": "short_interval_score",
+    "value": 0.342,
+    "derived_from": [
+      "raw_7"
+    ],
+    "why": "Mock call-spacing context"
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_8",
+    "timestamp": 6640,
+    "agent_id": "context",
+    "ue_id": "SIM-1002",
+    "feature": "context_proxy",
+    "value": 0.17,
+    "derived_from": [
+      "raw_8"
+    ],
+    "why": "Placeholder synthetic context"
+  },
+  {
+    "kind": "raw",
+    "id": "raw_9",
+    "timestamp": 8000,
+    "tower_id": "tower_3",
+    "ue_id": "SIM-1003",
+    "signal_type": "cqi",
+    "value": 11
+  },
+  {
+    "kind": "raw",
+    "id": "raw_10",
+    "timestamp": 8180,
+    "tower_id": "tower_3",
+    "ue_id": "SIM-1003",
+    "signal_type": "pusch_sinr",
+    "value": 24.5
+  },
+  {
+    "kind": "core_decision",
+    "id": "decision_2",
+    "timestamp": 8340,
+    "ue_id": "SIM-1002",
+    "agent_inputs": [
+      "input_raw_5",
+      "input_raw_6",
+      "input_raw_7",
+      "input_raw_8"
+    ],
+    "verdict": "clean",
+    "confidence": 0.946,
+    "contributions": [
+      {
+        "agent_id": "cqi",
+        "weight": 0.15
+      },
+      {
+        "agent_id": "mobility",
+        "weight": 0.2
+      },
+      {
+        "agent_id": "timing",
+        "weight": 0.5
+      },
+      {
+        "agent_id": "context",
+        "weight": 0.15
+      }
+    ],
+    "reasoning_trace": "The synthetic call-spacing, radio and context proxies are within the demo baseline. The mock fusion result marks this call clean."
+  },
+  {
+    "kind": "raw",
+    "id": "raw_11",
+    "timestamp": 8360,
+    "tower_id": "tower_3",
+    "ue_id": "SIM-1003",
+    "signal_type": "call_interval",
+    "value": 111.1
+  },
+  {
+    "kind": "raw",
+    "id": "raw_12",
+    "timestamp": 8540,
+    "tower_id": "tower_3",
+    "ue_id": "SIM-1003",
+    "signal_type": "context_score",
+    "value": 0.05
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_9",
+    "timestamp": 10100,
+    "agent_id": "cqi",
+    "ue_id": "SIM-1003",
+    "feature": "quality_deficit",
+    "value": 0.267,
+    "derived_from": [
+      "raw_9"
+    ],
+    "why": "Mock radio-quality context"
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_10",
+    "timestamp": 10280,
+    "agent_id": "mobility",
+    "ue_id": "SIM-1003",
+    "feature": "uplink_impairment",
+    "value": 0.02,
+    "derived_from": [
+      "raw_10"
+    ],
+    "why": "Mock uplink context; mobility not inferred"
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_11",
+    "timestamp": 10460,
+    "agent_id": "timing",
+    "ue_id": "SIM-1003",
+    "feature": "short_interval_score",
+    "value": 0.074,
+    "derived_from": [
+      "raw_11"
+    ],
+    "why": "Mock call-spacing context"
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_12",
+    "timestamp": 10640,
+    "agent_id": "context",
+    "ue_id": "SIM-1003",
+    "feature": "context_proxy",
+    "value": 0.05,
+    "derived_from": [
+      "raw_12"
+    ],
+    "why": "Placeholder synthetic context"
+  },
+  {
+    "kind": "raw",
+    "id": "raw_13",
+    "timestamp": 12000,
+    "tower_id": "tower_4",
+    "ue_id": "SIM-1004",
+    "signal_type": "cqi",
+    "value": 14
+  },
+  {
+    "kind": "raw",
+    "id": "raw_14",
+    "timestamp": 12180,
+    "tower_id": "tower_4",
+    "ue_id": "SIM-1004",
+    "signal_type": "pusch_sinr",
+    "value": 20.2
+  },
+  {
+    "kind": "core_decision",
+    "id": "decision_3",
+    "timestamp": 12340,
+    "ue_id": "SIM-1003",
+    "agent_inputs": [
+      "input_raw_9",
+      "input_raw_10",
+      "input_raw_11",
+      "input_raw_12"
+    ],
+    "verdict": "clean",
+    "confidence": 0.961,
+    "contributions": [
+      {
+        "agent_id": "cqi",
+        "weight": 0.15
+      },
+      {
+        "agent_id": "mobility",
+        "weight": 0.2
+      },
+      {
+        "agent_id": "timing",
+        "weight": 0.5
+      },
+      {
+        "agent_id": "context",
+        "weight": 0.15
+      }
+    ],
+    "reasoning_trace": "The synthetic call-spacing, radio and context proxies are within the demo baseline. The mock fusion result marks this call clean."
+  },
+  {
+    "kind": "raw",
+    "id": "raw_15",
+    "timestamp": 12360,
+    "tower_id": "tower_4",
+    "ue_id": "SIM-1004",
+    "signal_type": "call_interval",
+    "value": 73
+  },
+  {
+    "kind": "raw",
+    "id": "raw_16",
+    "timestamp": 12540,
+    "tower_id": "tower_4",
+    "ue_id": "SIM-1004",
+    "signal_type": "context_score",
+    "value": 0.01
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_13",
+    "timestamp": 14100,
+    "agent_id": "cqi",
+    "ue_id": "SIM-1004",
+    "feature": "quality_deficit",
+    "value": 0.067,
+    "derived_from": [
+      "raw_13"
+    ],
+    "why": "Mock radio-quality context"
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_14",
+    "timestamp": 14280,
+    "agent_id": "mobility",
+    "ue_id": "SIM-1004",
+    "feature": "uplink_impairment",
+    "value": 0.192,
+    "derived_from": [
+      "raw_14"
+    ],
+    "why": "Mock uplink context; mobility not inferred"
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_15",
+    "timestamp": 14460,
+    "agent_id": "timing",
+    "ue_id": "SIM-1004",
+    "feature": "short_interval_score",
+    "value": 0.392,
+    "derived_from": [
+      "raw_15"
+    ],
+    "why": "Mock call-spacing context"
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_16",
+    "timestamp": 14640,
+    "agent_id": "context",
+    "ue_id": "SIM-1004",
+    "feature": "context_proxy",
+    "value": 0.01,
+    "derived_from": [
+      "raw_16"
+    ],
+    "why": "Placeholder synthetic context"
+  },
+  {
+    "kind": "raw",
+    "id": "raw_17",
+    "timestamp": 16000,
+    "tower_id": "tower_5",
+    "ue_id": "SIM-1005",
+    "signal_type": "cqi",
+    "value": 13
+  },
+  {
+    "kind": "raw",
+    "id": "raw_18",
+    "timestamp": 16180,
+    "tower_id": "tower_5",
+    "ue_id": "SIM-1005",
+    "signal_type": "pusch_sinr",
+    "value": 23.5
+  },
+  {
+    "kind": "core_decision",
+    "id": "decision_4",
+    "timestamp": 16340,
+    "ue_id": "SIM-1004",
+    "agent_inputs": [
+      "input_raw_13",
+      "input_raw_14",
+      "input_raw_15",
+      "input_raw_16"
+    ],
+    "verdict": "clean",
+    "confidence": 0.945,
+    "contributions": [
+      {
+        "agent_id": "cqi",
+        "weight": 0.15
+      },
+      {
+        "agent_id": "mobility",
+        "weight": 0.2
+      },
+      {
+        "agent_id": "timing",
+        "weight": 0.5
+      },
+      {
+        "agent_id": "context",
+        "weight": 0.15
+      }
+    ],
+    "reasoning_trace": "The synthetic call-spacing, radio and context proxies are within the demo baseline. The mock fusion result marks this call clean."
+  },
+  {
+    "kind": "raw",
+    "id": "raw_19",
+    "timestamp": 16360,
+    "tower_id": "tower_5",
+    "ue_id": "SIM-1005",
+    "signal_type": "call_interval",
+    "value": 112.3
+  },
+  {
+    "kind": "raw",
+    "id": "raw_20",
+    "timestamp": 16540,
+    "tower_id": "tower_5",
+    "ue_id": "SIM-1005",
+    "signal_type": "context_score",
+    "value": 0.2
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_17",
+    "timestamp": 18100,
+    "agent_id": "cqi",
+    "ue_id": "SIM-1005",
+    "feature": "quality_deficit",
+    "value": 0.133,
+    "derived_from": [
+      "raw_17"
+    ],
+    "why": "Mock radio-quality context"
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_18",
+    "timestamp": 18280,
+    "agent_id": "mobility",
+    "ue_id": "SIM-1005",
+    "feature": "uplink_impairment",
+    "value": 0.06,
+    "derived_from": [
+      "raw_18"
+    ],
+    "why": "Mock uplink context; mobility not inferred"
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_19",
+    "timestamp": 18460,
+    "agent_id": "timing",
+    "ue_id": "SIM-1005",
+    "feature": "short_interval_score",
+    "value": 0.064,
+    "derived_from": [
+      "raw_19"
+    ],
+    "why": "Mock call-spacing context"
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_20",
+    "timestamp": 18640,
+    "agent_id": "context",
+    "ue_id": "SIM-1005",
+    "feature": "context_proxy",
+    "value": 0.2,
+    "derived_from": [
+      "raw_20"
+    ],
+    "why": "Placeholder synthetic context"
+  },
+  {
+    "kind": "raw",
+    "id": "raw_21",
+    "timestamp": 20000,
+    "tower_id": "tower_6",
+    "ue_id": "SIM-1006",
+    "signal_type": "cqi",
+    "value": 12
+  },
+  {
+    "kind": "raw",
+    "id": "raw_22",
+    "timestamp": 20180,
+    "tower_id": "tower_6",
+    "ue_id": "SIM-1006",
+    "signal_type": "pusch_sinr",
+    "value": 21.3
+  },
+  {
+    "kind": "core_decision",
+    "id": "decision_5",
+    "timestamp": 20340,
+    "ue_id": "SIM-1005",
+    "agent_inputs": [
+      "input_raw_17",
+      "input_raw_18",
+      "input_raw_19",
+      "input_raw_20"
+    ],
+    "verdict": "clean",
+    "confidence": 0.961,
+    "contributions": [
+      {
+        "agent_id": "cqi",
+        "weight": 0.15
+      },
+      {
+        "agent_id": "mobility",
+        "weight": 0.2
+      },
+      {
+        "agent_id": "timing",
+        "weight": 0.5
+      },
+      {
+        "agent_id": "context",
+        "weight": 0.15
+      }
+    ],
+    "reasoning_trace": "The synthetic call-spacing, radio and context proxies are within the demo baseline. The mock fusion result marks this call clean."
+  },
+  {
+    "kind": "raw",
+    "id": "raw_23",
+    "timestamp": 20360,
+    "tower_id": "tower_6",
+    "ue_id": "SIM-1006",
+    "signal_type": "call_interval",
+    "value": 104.8
+  },
+  {
+    "kind": "raw",
+    "id": "raw_24",
+    "timestamp": 20540,
+    "tower_id": "tower_6",
+    "ue_id": "SIM-1006",
+    "signal_type": "context_score",
+    "value": 0.21
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_21",
+    "timestamp": 22100,
+    "agent_id": "cqi",
+    "ue_id": "SIM-1006",
+    "feature": "quality_deficit",
+    "value": 0.2,
+    "derived_from": [
+      "raw_21"
+    ],
+    "why": "Mock radio-quality context"
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_22",
+    "timestamp": 22280,
+    "agent_id": "mobility",
+    "ue_id": "SIM-1006",
+    "feature": "uplink_impairment",
+    "value": 0.148,
+    "derived_from": [
+      "raw_22"
+    ],
+    "why": "Mock uplink context; mobility not inferred"
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_23",
+    "timestamp": 22460,
+    "agent_id": "timing",
+    "ue_id": "SIM-1006",
+    "feature": "short_interval_score",
+    "value": 0.127,
+    "derived_from": [
+      "raw_23"
+    ],
+    "why": "Mock call-spacing context"
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_24",
+    "timestamp": 22640,
+    "agent_id": "context",
+    "ue_id": "SIM-1006",
+    "feature": "context_proxy",
+    "value": 0.21,
+    "derived_from": [
+      "raw_24"
+    ],
+    "why": "Placeholder synthetic context"
+  },
+  {
+    "kind": "raw",
+    "id": "raw_25",
+    "timestamp": 24000,
+    "tower_id": "tower_7",
+    "ue_id": "SIM-1007",
+    "signal_type": "cqi",
+    "value": 14
+  },
+  {
+    "kind": "raw",
+    "id": "raw_26",
+    "timestamp": 24180,
+    "tower_id": "tower_7",
+    "ue_id": "SIM-1007",
+    "signal_type": "pusch_sinr",
+    "value": 24.9
+  },
+  {
+    "kind": "core_decision",
+    "id": "decision_6",
+    "timestamp": 24340,
+    "ue_id": "SIM-1006",
+    "agent_inputs": [
+      "input_raw_21",
+      "input_raw_22",
+      "input_raw_23",
+      "input_raw_24"
+    ],
+    "verdict": "clean",
+    "confidence": 0.955,
+    "contributions": [
+      {
+        "agent_id": "cqi",
+        "weight": 0.15
+      },
+      {
+        "agent_id": "mobility",
+        "weight": 0.2
+      },
+      {
+        "agent_id": "timing",
+        "weight": 0.5
+      },
+      {
+        "agent_id": "context",
+        "weight": 0.15
+      }
+    ],
+    "reasoning_trace": "The synthetic call-spacing, radio and context proxies are within the demo baseline. The mock fusion result marks this call clean."
+  },
+  {
+    "kind": "raw",
+    "id": "raw_27",
+    "timestamp": 24360,
+    "tower_id": "tower_7",
+    "ue_id": "SIM-1007",
+    "signal_type": "call_interval",
+    "value": 92.5
+  },
+  {
+    "kind": "raw",
+    "id": "raw_28",
+    "timestamp": 24540,
+    "tower_id": "tower_7",
+    "ue_id": "SIM-1007",
+    "signal_type": "context_score",
+    "value": 0.03
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_25",
+    "timestamp": 26100,
+    "agent_id": "cqi",
+    "ue_id": "SIM-1007",
+    "feature": "quality_deficit",
+    "value": 0.067,
+    "derived_from": [
+      "raw_25"
+    ],
+    "why": "Mock radio-quality context"
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_26",
+    "timestamp": 26280,
+    "agent_id": "mobility",
+    "ue_id": "SIM-1007",
+    "feature": "uplink_impairment",
+    "value": 0.004,
+    "derived_from": [
+      "raw_26"
+    ],
+    "why": "Mock uplink context; mobility not inferred"
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_27",
+    "timestamp": 26460,
+    "agent_id": "timing",
+    "ue_id": "SIM-1007",
+    "feature": "short_interval_score",
+    "value": 0.229,
+    "derived_from": [
+      "raw_27"
+    ],
+    "why": "Mock call-spacing context"
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_28",
+    "timestamp": 26640,
+    "agent_id": "context",
+    "ue_id": "SIM-1007",
+    "feature": "context_proxy",
+    "value": 0.03,
+    "derived_from": [
+      "raw_28"
+    ],
+    "why": "Placeholder synthetic context"
+  },
+  {
+    "kind": "raw",
+    "id": "raw_29",
+    "timestamp": 28000,
+    "tower_id": "tower_8",
+    "ue_id": "SIM-1008",
+    "signal_type": "cqi",
+    "value": 11
+  },
+  {
+    "kind": "raw",
+    "id": "raw_30",
+    "timestamp": 28180,
+    "tower_id": "tower_8",
+    "ue_id": "SIM-1008",
+    "signal_type": "pusch_sinr",
+    "value": 20
+  },
+  {
+    "kind": "core_decision",
+    "id": "decision_7",
+    "timestamp": 28340,
+    "ue_id": "SIM-1007",
+    "agent_inputs": [
+      "input_raw_25",
+      "input_raw_26",
+      "input_raw_27",
+      "input_raw_28"
+    ],
+    "verdict": "clean",
+    "confidence": 0.957,
+    "contributions": [
+      {
+        "agent_id": "cqi",
+        "weight": 0.15
+      },
+      {
+        "agent_id": "mobility",
+        "weight": 0.2
+      },
+      {
+        "agent_id": "timing",
+        "weight": 0.5
+      },
+      {
+        "agent_id": "context",
+        "weight": 0.15
+      }
+    ],
+    "reasoning_trace": "The synthetic call-spacing, radio and context proxies are within the demo baseline. The mock fusion result marks this call clean."
+  },
+  {
+    "kind": "raw",
+    "id": "raw_31",
+    "timestamp": 28360,
+    "tower_id": "tower_8",
+    "ue_id": "SIM-1008",
+    "signal_type": "call_interval",
+    "value": 76.4
+  },
+  {
+    "kind": "raw",
+    "id": "raw_32",
+    "timestamp": 28540,
+    "tower_id": "tower_8",
+    "ue_id": "SIM-1008",
+    "signal_type": "context_score",
+    "value": 0.23
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_29",
+    "timestamp": 30100,
+    "agent_id": "cqi",
+    "ue_id": "SIM-1008",
+    "feature": "quality_deficit",
+    "value": 0.267,
+    "derived_from": [
+      "raw_29"
+    ],
+    "why": "Mock radio-quality context"
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_30",
+    "timestamp": 30280,
+    "agent_id": "mobility",
+    "ue_id": "SIM-1008",
+    "feature": "uplink_impairment",
+    "value": 0.2,
+    "derived_from": [
+      "raw_30"
+    ],
+    "why": "Mock uplink context; mobility not inferred"
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_31",
+    "timestamp": 30460,
+    "agent_id": "timing",
+    "ue_id": "SIM-1008",
+    "feature": "short_interval_score",
+    "value": 0.363,
+    "derived_from": [
+      "raw_31"
+    ],
+    "why": "Mock call-spacing context"
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_32",
+    "timestamp": 30640,
+    "agent_id": "context",
+    "ue_id": "SIM-1008",
+    "feature": "context_proxy",
+    "value": 0.23,
+    "derived_from": [
+      "raw_32"
+    ],
+    "why": "Placeholder synthetic context"
+  },
+  {
+    "kind": "raw",
+    "id": "raw_33",
+    "timestamp": 32000,
+    "tower_id": "tower_1",
+    "ue_id": "SIM-1009",
+    "signal_type": "cqi",
+    "value": 13
+  },
+  {
+    "kind": "raw",
+    "id": "raw_34",
+    "timestamp": 32180,
+    "tower_id": "tower_1",
+    "ue_id": "SIM-1009",
+    "signal_type": "pusch_sinr",
+    "value": 23.2
+  },
+  {
+    "kind": "core_decision",
+    "id": "decision_8",
+    "timestamp": 32340,
+    "ue_id": "SIM-1008",
+    "agent_inputs": [
+      "input_raw_29",
+      "input_raw_30",
+      "input_raw_31",
+      "input_raw_32"
+    ],
+    "verdict": "clean",
+    "confidence": 0.94,
+    "contributions": [
+      {
+        "agent_id": "cqi",
+        "weight": 0.15
+      },
+      {
+        "agent_id": "mobility",
+        "weight": 0.2
+      },
+      {
+        "agent_id": "timing",
+        "weight": 0.5
+      },
+      {
+        "agent_id": "context",
+        "weight": 0.15
+      }
+    ],
+    "reasoning_trace": "The synthetic call-spacing, radio and context proxies are within the demo baseline. The mock fusion result marks this call clean."
+  },
+  {
+    "kind": "raw",
+    "id": "raw_35",
+    "timestamp": 32360,
+    "tower_id": "tower_1",
+    "ue_id": "SIM-1009",
+    "signal_type": "call_interval",
+    "value": 89.5
+  },
+  {
+    "kind": "raw",
+    "id": "raw_36",
+    "timestamp": 32540,
+    "tower_id": "tower_1",
+    "ue_id": "SIM-1009",
+    "signal_type": "context_score",
+    "value": 0.06
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_33",
+    "timestamp": 34100,
+    "agent_id": "cqi",
+    "ue_id": "SIM-1009",
+    "feature": "quality_deficit",
+    "value": 0.133,
+    "derived_from": [
+      "raw_33"
+    ],
+    "why": "Mock radio-quality context"
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_34",
+    "timestamp": 34280,
+    "agent_id": "mobility",
+    "ue_id": "SIM-1009",
+    "feature": "uplink_impairment",
+    "value": 0.072,
+    "derived_from": [
+      "raw_34"
+    ],
+    "why": "Mock uplink context; mobility not inferred"
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_35",
+    "timestamp": 34460,
+    "agent_id": "timing",
+    "ue_id": "SIM-1009",
+    "feature": "short_interval_score",
+    "value": 0.254,
+    "derived_from": [
+      "raw_35"
+    ],
+    "why": "Mock call-spacing context"
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_36",
+    "timestamp": 34640,
+    "agent_id": "context",
+    "ue_id": "SIM-1009",
+    "feature": "context_proxy",
+    "value": 0.06,
+    "derived_from": [
+      "raw_36"
+    ],
+    "why": "Placeholder synthetic context"
+  },
+  {
+    "kind": "raw",
+    "id": "raw_37",
+    "timestamp": 36000,
+    "tower_id": "tower_2",
+    "ue_id": "SIM-1010",
+    "signal_type": "cqi",
+    "value": 11
+  },
+  {
+    "kind": "raw",
+    "id": "raw_38",
+    "timestamp": 36180,
+    "tower_id": "tower_2",
+    "ue_id": "SIM-1010",
+    "signal_type": "pusch_sinr",
+    "value": 16.2
+  },
+  {
+    "kind": "core_decision",
+    "id": "decision_9",
+    "timestamp": 36340,
+    "ue_id": "SIM-1009",
+    "agent_inputs": [
+      "input_raw_33",
+      "input_raw_34",
+      "input_raw_35",
+      "input_raw_36"
+    ],
+    "verdict": "clean",
+    "confidence": 0.953,
+    "contributions": [
+      {
+        "agent_id": "cqi",
+        "weight": 0.15
+      },
+      {
+        "agent_id": "mobility",
+        "weight": 0.2
+      },
+      {
+        "agent_id": "timing",
+        "weight": 0.5
+      },
+      {
+        "agent_id": "context",
+        "weight": 0.15
+      }
+    ],
+    "reasoning_trace": "The synthetic call-spacing, radio and context proxies are within the demo baseline. The mock fusion result marks this call clean."
+  },
+  {
+    "kind": "raw",
+    "id": "raw_39",
+    "timestamp": 36360,
+    "tower_id": "tower_2",
+    "ue_id": "SIM-1010",
+    "signal_type": "call_interval",
+    "value": 83.9
+  },
+  {
+    "kind": "raw",
+    "id": "raw_40",
+    "timestamp": 36540,
+    "tower_id": "tower_2",
+    "ue_id": "SIM-1010",
+    "signal_type": "context_score",
+    "value": 0.1
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_37",
+    "timestamp": 38100,
+    "agent_id": "cqi",
+    "ue_id": "SIM-1010",
+    "feature": "quality_deficit",
+    "value": 0.267,
+    "derived_from": [
+      "raw_37"
+    ],
+    "why": "Mock radio-quality context"
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_38",
+    "timestamp": 38280,
+    "agent_id": "mobility",
+    "ue_id": "SIM-1010",
+    "feature": "uplink_impairment",
+    "value": 0.352,
+    "derived_from": [
+      "raw_38"
+    ],
+    "why": "Mock uplink context; mobility not inferred"
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_39",
+    "timestamp": 38460,
+    "agent_id": "timing",
+    "ue_id": "SIM-1010",
+    "feature": "short_interval_score",
+    "value": 0.301,
+    "derived_from": [
+      "raw_39"
+    ],
+    "why": "Mock call-spacing context"
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_40",
+    "timestamp": 38640,
+    "agent_id": "context",
+    "ue_id": "SIM-1010",
+    "feature": "context_proxy",
+    "value": 0.1,
+    "derived_from": [
+      "raw_40"
+    ],
+    "why": "Placeholder synthetic context"
+  },
+  {
+    "kind": "raw",
+    "id": "raw_41",
+    "timestamp": 40000,
+    "tower_id": "tower_3",
+    "ue_id": "SIM-1011",
+    "signal_type": "cqi",
+    "value": 6
+  },
+  {
+    "kind": "raw",
+    "id": "raw_42",
+    "timestamp": 40180,
+    "tower_id": "tower_3",
+    "ue_id": "SIM-1011",
+    "signal_type": "pusch_sinr",
+    "value": 5.8
+  },
+  {
+    "kind": "core_decision",
+    "id": "decision_10",
+    "timestamp": 40340,
+    "ue_id": "SIM-1010",
+    "agent_inputs": [
+      "input_raw_37",
+      "input_raw_38",
+      "input_raw_39",
+      "input_raw_40"
+    ],
+    "verdict": "clean",
+    "confidence": 0.942,
+    "contributions": [
+      {
+        "agent_id": "cqi",
+        "weight": 0.15
+      },
+      {
+        "agent_id": "mobility",
+        "weight": 0.2
+      },
+      {
+        "agent_id": "timing",
+        "weight": 0.5
+      },
+      {
+        "agent_id": "context",
+        "weight": 0.15
+      }
+    ],
+    "reasoning_trace": "The synthetic call-spacing, radio and context proxies are within the demo baseline. The mock fusion result marks this call clean."
+  },
+  {
+    "kind": "raw",
+    "id": "raw_43",
+    "timestamp": 40360,
+    "tower_id": "tower_3",
+    "ue_id": "SIM-1011",
+    "signal_type": "call_interval",
+    "value": 3
+  },
+  {
+    "kind": "raw",
+    "id": "raw_44",
+    "timestamp": 40540,
+    "tower_id": "tower_3",
+    "ue_id": "SIM-1011",
+    "signal_type": "context_score",
+    "value": 0.97
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_41",
+    "timestamp": 42100,
+    "agent_id": "cqi",
+    "ue_id": "SIM-1011",
+    "feature": "quality_deficit",
+    "value": 0.6,
+    "derived_from": [
+      "raw_41"
+    ],
+    "why": "Mock radio-quality context"
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_42",
+    "timestamp": 42280,
+    "agent_id": "mobility",
+    "ue_id": "SIM-1011",
+    "feature": "uplink_impairment",
+    "value": 0.768,
+    "derived_from": [
+      "raw_42"
+    ],
+    "why": "Mock uplink context; mobility not inferred"
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_43",
+    "timestamp": 42460,
+    "agent_id": "timing",
+    "ue_id": "SIM-1011",
+    "feature": "short_interval_score",
+    "value": 0.975,
+    "derived_from": [
+      "raw_43"
+    ],
+    "why": "Mock call-spacing context"
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_44",
+    "timestamp": 42640,
+    "agent_id": "context",
+    "ue_id": "SIM-1011",
+    "feature": "context_proxy",
+    "value": 0.97,
+    "derived_from": [
+      "raw_44"
+    ],
+    "why": "Placeholder synthetic context"
+  },
+  {
+    "kind": "raw",
+    "id": "raw_45",
+    "timestamp": 44000,
+    "tower_id": "tower_4",
+    "ue_id": "SIM-1012",
+    "signal_type": "cqi",
+    "value": 13
+  },
+  {
+    "kind": "raw",
+    "id": "raw_46",
+    "timestamp": 44180,
+    "tower_id": "tower_4",
+    "ue_id": "SIM-1012",
+    "signal_type": "pusch_sinr",
+    "value": 19
+  },
+  {
+    "kind": "core_decision",
+    "id": "decision_11",
+    "timestamp": 44340,
+    "ue_id": "SIM-1011",
+    "agent_inputs": [
+      "input_raw_41",
+      "input_raw_42",
+      "input_raw_43",
+      "input_raw_44"
+    ],
+    "verdict": "flagged",
+    "confidence": 0.938,
+    "contributions": [
+      {
+        "agent_id": "cqi",
+        "weight": 0.15
+      },
+      {
+        "agent_id": "mobility",
+        "weight": 0.2
+      },
+      {
+        "agent_id": "timing",
+        "weight": 0.5
+      },
+      {
+        "agent_id": "context",
+        "weight": 0.15
+      }
+    ],
+    "reasoning_trace": "This synthetic example combines unusually short call intervals with elevated radio and context proxy scores. The mock fusion result flags the call for review; this is scripted evidence, not a validated fraud assessment."
+  },
+  {
+    "kind": "raw",
+    "id": "raw_47",
+    "timestamp": 44360,
+    "tower_id": "tower_4",
+    "ue_id": "SIM-1012",
+    "signal_type": "call_interval",
+    "value": 85.7
+  },
+  {
+    "kind": "raw",
+    "id": "raw_48",
+    "timestamp": 44540,
+    "tower_id": "tower_4",
+    "ue_id": "SIM-1012",
+    "signal_type": "context_score",
+    "value": 0.04
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_45",
+    "timestamp": 46100,
+    "agent_id": "cqi",
+    "ue_id": "SIM-1012",
+    "feature": "quality_deficit",
+    "value": 0.133,
+    "derived_from": [
+      "raw_45"
+    ],
+    "why": "Mock radio-quality context"
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_46",
+    "timestamp": 46280,
+    "agent_id": "mobility",
+    "ue_id": "SIM-1012",
+    "feature": "uplink_impairment",
+    "value": 0.24,
+    "derived_from": [
+      "raw_46"
+    ],
+    "why": "Mock uplink context; mobility not inferred"
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_47",
+    "timestamp": 46460,
+    "agent_id": "timing",
+    "ue_id": "SIM-1012",
+    "feature": "short_interval_score",
+    "value": 0.286,
+    "derived_from": [
+      "raw_47"
+    ],
+    "why": "Mock call-spacing context"
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_48",
+    "timestamp": 46640,
+    "agent_id": "context",
+    "ue_id": "SIM-1012",
+    "feature": "context_proxy",
+    "value": 0.04,
+    "derived_from": [
+      "raw_48"
+    ],
+    "why": "Placeholder synthetic context"
+  },
+  {
+    "kind": "raw",
+    "id": "raw_49",
+    "timestamp": 48000,
+    "tower_id": "tower_5",
+    "ue_id": "SIM-1013",
+    "signal_type": "cqi",
+    "value": 15
+  },
+  {
+    "kind": "raw",
+    "id": "raw_50",
+    "timestamp": 48180,
+    "tower_id": "tower_5",
+    "ue_id": "SIM-1013",
+    "signal_type": "pusch_sinr",
+    "value": 16.9
+  },
+  {
+    "kind": "core_decision",
+    "id": "decision_12",
+    "timestamp": 48340,
+    "ue_id": "SIM-1012",
+    "agent_inputs": [
+      "input_raw_45",
+      "input_raw_46",
+      "input_raw_47",
+      "input_raw_48"
+    ],
+    "verdict": "clean",
+    "confidence": 0.948,
+    "contributions": [
+      {
+        "agent_id": "cqi",
+        "weight": 0.15
+      },
+      {
+        "agent_id": "mobility",
+        "weight": 0.2
+      },
+      {
+        "agent_id": "timing",
+        "weight": 0.5
+      },
+      {
+        "agent_id": "context",
+        "weight": 0.15
+      }
+    ],
+    "reasoning_trace": "The synthetic call-spacing, radio and context proxies are within the demo baseline. The mock fusion result marks this call clean."
+  },
+  {
+    "kind": "raw",
+    "id": "raw_51",
+    "timestamp": 48360,
+    "tower_id": "tower_5",
+    "ue_id": "SIM-1013",
+    "signal_type": "call_interval",
+    "value": 116.1
+  },
+  {
+    "kind": "raw",
+    "id": "raw_52",
+    "timestamp": 48540,
+    "tower_id": "tower_5",
+    "ue_id": "SIM-1013",
+    "signal_type": "context_score",
+    "value": 0.24
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_49",
+    "timestamp": 50100,
+    "agent_id": "cqi",
+    "ue_id": "SIM-1013",
+    "feature": "quality_deficit",
+    "value": 0,
+    "derived_from": [
+      "raw_49"
+    ],
+    "why": "Mock radio-quality context"
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_50",
+    "timestamp": 50280,
+    "agent_id": "mobility",
+    "ue_id": "SIM-1013",
+    "feature": "uplink_impairment",
+    "value": 0.324,
+    "derived_from": [
+      "raw_50"
+    ],
+    "why": "Mock uplink context; mobility not inferred"
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_51",
+    "timestamp": 50460,
+    "agent_id": "timing",
+    "ue_id": "SIM-1013",
+    "feature": "short_interval_score",
+    "value": 0.033,
+    "derived_from": [
+      "raw_51"
+    ],
+    "why": "Mock call-spacing context"
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_52",
+    "timestamp": 50640,
+    "agent_id": "context",
+    "ue_id": "SIM-1013",
+    "feature": "context_proxy",
+    "value": 0.24,
+    "derived_from": [
+      "raw_52"
+    ],
+    "why": "Placeholder synthetic context"
+  },
+  {
+    "kind": "raw",
+    "id": "raw_53",
+    "timestamp": 52000,
+    "tower_id": "tower_6",
+    "ue_id": "SIM-1014",
+    "signal_type": "cqi",
+    "value": 4
+  },
+  {
+    "kind": "raw",
+    "id": "raw_54",
+    "timestamp": 52180,
+    "tower_id": "tower_6",
+    "ue_id": "SIM-1014",
+    "signal_type": "pusch_sinr",
+    "value": 4.8
+  },
+  {
+    "kind": "core_decision",
+    "id": "decision_13",
+    "timestamp": 52340,
+    "ue_id": "SIM-1013",
+    "agent_inputs": [
+      "input_raw_49",
+      "input_raw_50",
+      "input_raw_51",
+      "input_raw_52"
+    ],
+    "verdict": "clean",
+    "confidence": 0.958,
+    "contributions": [
+      {
+        "agent_id": "cqi",
+        "weight": 0.15
+      },
+      {
+        "agent_id": "mobility",
+        "weight": 0.2
+      },
+      {
+        "agent_id": "timing",
+        "weight": 0.5
+      },
+      {
+        "agent_id": "context",
+        "weight": 0.15
+      }
+    ],
+    "reasoning_trace": "The synthetic call-spacing, radio and context proxies are within the demo baseline. The mock fusion result marks this call clean."
+  },
+  {
+    "kind": "raw",
+    "id": "raw_55",
+    "timestamp": 52360,
+    "tower_id": "tower_6",
+    "ue_id": "SIM-1014",
+    "signal_type": "call_interval",
+    "value": 3.5
+  },
+  {
+    "kind": "raw",
+    "id": "raw_56",
+    "timestamp": 52540,
+    "tower_id": "tower_6",
+    "ue_id": "SIM-1014",
+    "signal_type": "context_score",
+    "value": 0.82
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_53",
+    "timestamp": 54100,
+    "agent_id": "cqi",
+    "ue_id": "SIM-1014",
+    "feature": "quality_deficit",
+    "value": 0.733,
+    "derived_from": [
+      "raw_53"
+    ],
+    "why": "Mock radio-quality context"
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_54",
+    "timestamp": 54280,
+    "agent_id": "mobility",
+    "ue_id": "SIM-1014",
+    "feature": "uplink_impairment",
+    "value": 0.808,
+    "derived_from": [
+      "raw_54"
+    ],
+    "why": "Mock uplink context; mobility not inferred"
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_55",
+    "timestamp": 54460,
+    "agent_id": "timing",
+    "ue_id": "SIM-1014",
+    "feature": "short_interval_score",
+    "value": 0.971,
+    "derived_from": [
+      "raw_55"
+    ],
+    "why": "Mock call-spacing context"
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_56",
+    "timestamp": 54640,
+    "agent_id": "context",
+    "ue_id": "SIM-1014",
+    "feature": "context_proxy",
+    "value": 0.82,
+    "derived_from": [
+      "raw_56"
+    ],
+    "why": "Placeholder synthetic context"
+  },
+  {
+    "kind": "raw",
+    "id": "raw_57",
+    "timestamp": 56000,
+    "tower_id": "tower_7",
+    "ue_id": "SIM-1015",
+    "signal_type": "cqi",
+    "value": 13
+  },
+  {
+    "kind": "raw",
+    "id": "raw_58",
+    "timestamp": 56180,
+    "tower_id": "tower_7",
+    "ue_id": "SIM-1015",
+    "signal_type": "pusch_sinr",
+    "value": 17.1
+  },
+  {
+    "kind": "core_decision",
+    "id": "decision_14",
+    "timestamp": 56340,
+    "ue_id": "SIM-1014",
+    "agent_inputs": [
+      "input_raw_53",
+      "input_raw_54",
+      "input_raw_55",
+      "input_raw_56"
+    ],
+    "verdict": "flagged",
+    "confidence": 0.938,
+    "contributions": [
+      {
+        "agent_id": "cqi",
+        "weight": 0.15
+      },
+      {
+        "agent_id": "mobility",
+        "weight": 0.2
+      },
+      {
+        "agent_id": "timing",
+        "weight": 0.5
+      },
+      {
+        "agent_id": "context",
+        "weight": 0.15
+      }
+    ],
+    "reasoning_trace": "This synthetic example combines unusually short call intervals with elevated radio and context proxy scores. The mock fusion result flags the call for review; this is scripted evidence, not a validated fraud assessment."
+  },
+  {
+    "kind": "raw",
+    "id": "raw_59",
+    "timestamp": 56360,
+    "tower_id": "tower_7",
+    "ue_id": "SIM-1015",
+    "signal_type": "call_interval",
+    "value": 82.2
+  },
+  {
+    "kind": "raw",
+    "id": "raw_60",
+    "timestamp": 56540,
+    "tower_id": "tower_7",
+    "ue_id": "SIM-1015",
+    "signal_type": "context_score",
+    "value": 0.18
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_57",
+    "timestamp": 58100,
+    "agent_id": "cqi",
+    "ue_id": "SIM-1015",
+    "feature": "quality_deficit",
+    "value": 0.133,
+    "derived_from": [
+      "raw_57"
+    ],
+    "why": "Mock radio-quality context"
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_58",
+    "timestamp": 58280,
+    "agent_id": "mobility",
+    "ue_id": "SIM-1015",
+    "feature": "uplink_impairment",
+    "value": 0.316,
+    "derived_from": [
+      "raw_58"
+    ],
+    "why": "Mock uplink context; mobility not inferred"
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_59",
+    "timestamp": 58460,
+    "agent_id": "timing",
+    "ue_id": "SIM-1015",
+    "feature": "short_interval_score",
+    "value": 0.315,
+    "derived_from": [
+      "raw_59"
+    ],
+    "why": "Mock call-spacing context"
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_60",
+    "timestamp": 58640,
+    "agent_id": "context",
+    "ue_id": "SIM-1015",
+    "feature": "context_proxy",
+    "value": 0.18,
+    "derived_from": [
+      "raw_60"
+    ],
+    "why": "Placeholder synthetic context"
+  },
+  {
+    "kind": "raw",
+    "id": "raw_61",
+    "timestamp": 60000,
+    "tower_id": "tower_8",
+    "ue_id": "SIM-1016",
+    "signal_type": "cqi",
+    "value": 13
+  },
+  {
+    "kind": "raw",
+    "id": "raw_62",
+    "timestamp": 60180,
+    "tower_id": "tower_8",
+    "ue_id": "SIM-1016",
+    "signal_type": "pusch_sinr",
+    "value": 20.4
+  },
+  {
+    "kind": "core_decision",
+    "id": "decision_15",
+    "timestamp": 60340,
+    "ue_id": "SIM-1015",
+    "agent_inputs": [
+      "input_raw_57",
+      "input_raw_58",
+      "input_raw_59",
+      "input_raw_60"
+    ],
+    "verdict": "clean",
+    "confidence": 0.943,
+    "contributions": [
+      {
+        "agent_id": "cqi",
+        "weight": 0.15
+      },
+      {
+        "agent_id": "mobility",
+        "weight": 0.2
+      },
+      {
+        "agent_id": "timing",
+        "weight": 0.5
+      },
+      {
+        "agent_id": "context",
+        "weight": 0.15
+      }
+    ],
+    "reasoning_trace": "The synthetic call-spacing, radio and context proxies are within the demo baseline. The mock fusion result marks this call clean."
+  },
+  {
+    "kind": "raw",
+    "id": "raw_63",
+    "timestamp": 60360,
+    "tower_id": "tower_8",
+    "ue_id": "SIM-1016",
+    "signal_type": "call_interval",
+    "value": 80.5
+  },
+  {
+    "kind": "raw",
+    "id": "raw_64",
+    "timestamp": 60540,
+    "tower_id": "tower_8",
+    "ue_id": "SIM-1016",
+    "signal_type": "context_score",
+    "value": 0.07
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_61",
+    "timestamp": 62100,
+    "agent_id": "cqi",
+    "ue_id": "SIM-1016",
+    "feature": "quality_deficit",
+    "value": 0.133,
+    "derived_from": [
+      "raw_61"
+    ],
+    "why": "Mock radio-quality context"
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_62",
+    "timestamp": 62280,
+    "agent_id": "mobility",
+    "ue_id": "SIM-1016",
+    "feature": "uplink_impairment",
+    "value": 0.184,
+    "derived_from": [
+      "raw_62"
+    ],
+    "why": "Mock uplink context; mobility not inferred"
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_63",
+    "timestamp": 62460,
+    "agent_id": "timing",
+    "ue_id": "SIM-1016",
+    "feature": "short_interval_score",
+    "value": 0.329,
+    "derived_from": [
+      "raw_63"
+    ],
+    "why": "Mock call-spacing context"
+  },
+  {
+    "kind": "agent_output",
+    "id": "input_raw_64",
+    "timestamp": 62640,
+    "agent_id": "context",
+    "ue_id": "SIM-1016",
+    "feature": "context_proxy",
+    "value": 0.07,
+    "derived_from": [
+      "raw_64"
+    ],
+    "why": "Placeholder synthetic context"
+  },
+  {
+    "kind": "core_decision",
+    "id": "decision_16",
+    "timestamp": 64340,
+    "ue_id": "SIM-1016",
+    "agent_inputs": [
+      "input_raw_61",
+      "input_raw_62",
+      "input_raw_63",
+      "input_raw_64"
+    ],
+    "verdict": "clean",
+    "confidence": 0.947,
+    "contributions": [
+      {
+        "agent_id": "cqi",
+        "weight": 0.15
+      },
+      {
+        "agent_id": "mobility",
+        "weight": 0.2
+      },
+      {
+        "agent_id": "timing",
+        "weight": 0.5
+      },
+      {
+        "agent_id": "context",
+        "weight": 0.15
+      }
+    ],
+    "reasoning_trace": "The synthetic call-spacing, radio and context proxies are within the demo baseline. The mock fusion result marks this call clean."
+  }
+]

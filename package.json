@@ -1,0 +1,19 @@
+{
+  "name": "build-a-web-based-3d-visualization",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "node tests/run.js",
+    "generate:dataset": "node scripts/generate-dataset.js"
+  },
+  "devDependencies": {
+    "vite": "^8.3.0"
+  },
+  "dependencies": {
+    "three": "^0.186.0"
+  }
+}
